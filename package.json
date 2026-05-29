@@ -1,0 +1,33 @@
+{
+  "name": "mini-store",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:storefront": "npm run dev --workspace=@mini-store/storefront",
+    "dev:admin": "npm run dev --workspace=@mini-store/admin",
+    "build:storefront": "npm run build --workspace=@mini-store/storefront",
+    "build:admin": "npm run build --workspace=@mini-store/admin",
+    "build:api": "npm run build --workspace=@mini-store/api",
+    "lint": "npm run lint:prettier && npm run lint:eslint && npm run lint:styles",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "lint:styles": "stylelint \"**/*.css\"",
+    "fix": "npm run fix:prettier && npm run fix:eslint && npm run fix:styles",
+    "fix:prettier": "prettier --write .",
+    "fix:eslint": "eslint . --fix",
+    "fix:styles": "stylelint \"**/*.css\" --fix"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.9.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}

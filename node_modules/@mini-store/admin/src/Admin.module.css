@@ -1,0 +1,399 @@
+/* ===== Layout ===== */
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #f5f7fa;
+  color: #1a202c;
+  font-family: system-ui, sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #1a202c;
+  color: #fff;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 56px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge {
+  background: #e53e3e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: 16px;
+}
+
+.navBtn, .navActive {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.navBtn:hover { background: rgba(255,255,255,.08); color: #fff; }
+.navActive { background: rgba(255,255,255,.12); color: #fff; font-weight: 600; }
+
+.userInfo {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userEmail {
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+.roleBadge {
+  background: #2d3748;
+  color: #68d391;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid #4a5568;
+  color: #a0aec0;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.logoutBtn:hover { border-color: #e53e3e; color: #fc8181; }
+
+/* ===== Content ===== */
+.content {
+  overflow-y: auto;
+}
+
+/* ===== Panel ===== */
+.panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.panelTitle {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.panelSub {
+  margin: 0;
+  font-size: 13px;
+  color: #718096;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #3182ce;
+  font-size: 13px;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 8px;
+  display: block;
+}
+.backBtn:hover { text-decoration: underline; }
+
+/* ===== Table ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 8%);
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #718096;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 14px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f4f8;
+  vertical-align: middle;
+}
+
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: #f7fafc; }
+
+.slug {
+  background: #edf2f7;
+  color: #2d3748;
+  font-size: 12px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.descCell {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4a5568;
+}
+
+.dateCell {
+  color: #a0aec0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ===== Empty / State ===== */
+.stateBox {
+  padding: 48px;
+  text-align: center;
+  color: #718096;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 32px;
+  gap: 16px;
+  color: #718096;
+}
+
+.emptyIcon { font-size: 56px; }
+.emptyState p { margin: 0; font-size: 16px; }
+
+/* ===== Auth ===== */
+.authWrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  padding: 24px;
+}
+
+.authCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
+}
+
+.authLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.authLogoText {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.authTitle {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.authSub {
+  margin: 0 0 28px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.authSwitch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #718096;
+}
+
+/* ===== Form ===== */
+.form {
+  background: #fff;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 8%);
+  max-width: 760px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: #1a202c;
+  transition: border-color .15s, box-shadow .15s;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: #1a202c;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.textarea:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.hint {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ===== Buttons ===== */
+.btnPrimary {
+  padding: 10px 20px;
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, opacity .15s;
+  white-space: nowrap;
+}
+.btnPrimary:hover:not(:disabled) { background: #2b6cb0; }
+.btnPrimary:disabled { opacity: .6; cursor: not-allowed; }
+
+.btnSecondary {
+  padding: 10px 20px;
+  background: #edf2f7;
+  color: #4a5568;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+}
+.btnSecondary:hover:not(:disabled) { background: #e2e8f0; }
+.btnSecondary:disabled { opacity: .6; cursor: not-allowed; }
+
+.linkBtn {
+  background: none;
+  border: none;
+  color: #3182ce;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+}
+.linkBtn:hover { text-decoration: underline; }
+
+/* ===== Messages ===== */
+.errorMsg {
+  color: #c53030;
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.successMsg {
+  color: #276749;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}

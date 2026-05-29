@@ -1,0 +1,10 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": ["**/node_modules/**", "**/dist/**"],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "declaration-no-important": true,
+    "shorthand-property-no-redundant-values": true,
+    "media-feature-range-notation": "context"
+  }
+}
